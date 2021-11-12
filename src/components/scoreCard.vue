@@ -25,42 +25,32 @@ import MatchCard from "@/components/matchCard";
 export default {
   name: "scoreCard",
   components: {MatchCard},
+  props: {
+    tabName: {
+      type: String
+    },
+    league1: {
+      type: Array
+    },
+    league2: {
+      type: Array
+    },
+  },
   data() {
     return {
-      franceLeague: [
-        {
-          "first_team": "Monaco",
-          "second_team": "Rennes",
-          "first_team_score": 1,
-          "second_team_score": 1,
-          "match_type": "End pens"
-        },
-        {
-          "first_team": "AC MILAN",
-          "second_team": "Jeventus",
-          "first_team_score": 1,
-          "second_team_score": 0,
-          "match_type": "End"
-        }
-      ],
-      saLeague: [
-        {
-          "first_team": "Man United",
-          "second_team": "Ars",
-          "first_team_score": 2,
-          "second_team_score": 1,
-          "match_type": "End"
-        },
-        {
-          "first_team": "Real Madrid",
-          "second_team": "Barcelona",
-          "first_team_score": 1,
-          "second_team_score": 0,
-          "match_type": "End"
-        }
-      ],
+      franceLeague: [],
+      saLeague: [],
     }
-  }
+  },
+  created() {
+    this.tabRecordManage();
+  },
+  methods:{
+    tabRecordManage(){
+      this.saLeague = this.league2;
+      this.franceLeague = this.league1;
+  },
+}
 }
 </script>
 
