@@ -43,7 +43,7 @@ export default {
     }
   },
   created() {
-    this.tabRecordManage();
+    this.tabRecordManage(); //on component create it call the function and update the record of the matches based on Main Tab Values
   },
   methods:{
     tabRecordManage(){

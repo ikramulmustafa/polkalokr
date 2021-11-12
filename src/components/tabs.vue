@@ -222,20 +222,53 @@ export default {
   },
   methods: {
     openTab(value) {
-      this.$emit('tabChanged', value);
+      this.$emit('tabChanged', value); //change the active tab  on of click
       this.activeTab = value;
       this.activeSubTab = "all";
-      this.tabRecordManage();
-
+      this.tabRecordManage(value);
     },
-    openSubTab(value) {
+    openSubTab(value) { //change the active subtab  on of click
       this.$emit('tabChanged', value);
       this.activeSubTab = value;
     },
-    tabRecordManage(){
-      if(this.activeTab === 'today')
-      {
-        this.franceLeague = [
+    tabRecordManage(value) { //base on active Main Tab its removes the old record of the array and push new record.
+      this.franceLeague.splice(0);
+      this.saLeague.splice(0);
+      if (value === 'yesterday') {
+        this.franceLeague.push(
+          {
+            first_team: "Monaco",
+            second_team: "Rennes",
+            first_team_score: 1,
+            second_team_score: 1,
+            match_type: "End pens"
+          },
+          {
+            first_team: "AC MILAN",
+            second_team: "Jeventus",
+            first_team_score: 1,
+            second_team_score: 0,
+            match_type: "End"
+          }
+        );
+        this.saLeague.push(
+          {
+            first_team: "Man United",
+            second_team: "Ars",
+            first_team_score: 2,
+            second_team_score: 1,
+            match_type: "End"
+          },
+          {
+            first_team: "Real Madrid",
+            second_team: "Barcelona",
+            first_team_score: 1,
+            second_team_score: 0,
+            match_type: "End"
+          }
+      );
+      } else if (value === 'today') {
+        this.franceLeague.push(
           {
             first_team: "Brazil",
             second_team: "Argentina",
@@ -248,10 +281,10 @@ export default {
             second_team: "Port",
             first_team_score: 1,
             second_team_score: 0,
-            match_type:"End"
+            match_type: "End"
           }
-        ];
-        this.saLeague = [
+        );
+        this.saLeague.push(
           {
             first_team: "LiverPool",
             second_team: "Chelsea",
@@ -266,9 +299,9 @@ export default {
             second_team_score: 0,
             match_type: "End"
           }
-        ];
-      } else if (this.activeTab === 'tomorrow'){
-        this.franceLeague = [
+        );
+      } else if (value === 'tomorrow') {
+        this.franceLeague.push(
           {
             first_team: "France",
             second_team: "Spain",
@@ -281,10 +314,10 @@ export default {
             second_team: "Port",
             first_team_score: 1,
             second_team_score: 0,
-            match_type:"End"
+            match_type: "End"
           }
-        ];
-        this.saLeague = [
+        );
+        this.saLeague.push(
           {
             first_team: "Valencia",
             second_team: "Chelsea",
@@ -299,7 +332,7 @@ export default {
             second_team_score: 0,
             match_type: "End"
           }
-        ];
+        );
       }
     }
 
