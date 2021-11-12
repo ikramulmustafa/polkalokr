@@ -64,10 +64,17 @@
           </score-card>
         </div>
         <div v-if="activeSubTab === 'live'">
-          <score-card :tab-name="activeTab"></score-card>
-        </div>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>        </div>
         <div v-if="activeSubTab === 'favorites'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
       </div>
 
@@ -102,10 +109,18 @@
           </score-card>
         </div>
         <div v-if="activeSubTab === 'live'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
         <div v-if="activeSubTab === 'favorites'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
       </div>
 
@@ -133,13 +148,25 @@
           </div>
         </div>
         <div v-if="activeSubTab === 'all'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
         <div v-if="activeSubTab === 'live'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
         <div v-if="activeSubTab === 'favorites'">
-          <score-card :tab-name="activeTab"></score-card>
+          <score-card :tab-name="activeTab"
+                      :league1="franceLeague"
+                      :league2="saLeague"
+          >
+          </score-card>
         </div>
       </div>
 
