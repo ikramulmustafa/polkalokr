@@ -11,6 +11,8 @@
           </label>
         </div>
         <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Scores</a>
         </div>
         <div class="scores">
           <p>Scores</p>
@@ -34,6 +36,7 @@ export default {
   components: {
     Tabs
   },
+  methods:{}
 }
 </script>
 
@@ -75,6 +78,7 @@ export default {
   display: inline;
   float: right;
   font-size: 18px;
+  z-index: 1;
 }
 
 .nav > .nav-links > a {

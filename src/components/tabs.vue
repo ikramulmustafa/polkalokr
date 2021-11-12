@@ -21,7 +21,8 @@
         <div :class="[activeTab === 'tomorrow' ? 'activeBar' : '' ]"></div>
       </div>
       <div class="flex-column justify-content-center pointer calendar">
-        <p :class="[activeTab === 'tomorrow' ? 'tab-title' : 'tab-not-active' ]"><b-icon icon="calendar" style="color: #ffffff;"></b-icon></p>
+        <p :class="[activeTab === 'tomorrow' ? 'tab-title' : 'tab-not-active' ]">
+          <b-icon icon="calendar2-event" style="color: #ffffff;"></b-icon></p>
            </div>
     </div>
 
@@ -160,10 +161,12 @@ export default {
 <style scoped>
 .tabs {
   background: #00b232;
+  cursor: pointer;
 }
 .sub-tab{
   background: #ffffff;
   margin-top: 5px;
+  cursor: pointer;
 }
 .secondary {
   color: #283D47;

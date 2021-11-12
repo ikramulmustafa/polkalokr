@@ -3,99 +3,16 @@
     <div class="container mt-3">
       <div class="wrappers">
         <div class="wrap-content">
-          <div class="wrap-header">
-            <div class="row">
-              <div class="col s10">
-                <div class="content-left">
-                  <h6><img width="24px" height="20px" class="flag" src="../assets/france.png">France- Coupe De La</h6>
-                </div>
-              </div>
-              <div class="col s2">
-                <div class="content-right">
-                  <b-icon icon="star" style="color: #00b232;"></b-icon>
-                </div>
-              </div>
-            </div>
-          </div>
           <template>
-            <div class="wrap-player bg-grey" v-for="(league,index) in franceLeague" :key="index">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li class="matchTypeWidth">{{ league.match_type }}</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>{{ league.first_team }}</li>
-                      <li>{{ league.second_team }}</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>{{ league.first_team_score }}</li>
-                      <li>{{ league.second_team_score }}</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <match-card :league-record="franceLeague" :leagueName="'France - Coupe De la liga'"></match-card>
           </template>
 
         </div>
       </div>
       <div class="wrappers">
         <div class="wrap-content">
-          <div class="wrap-header">
-            <div class="row">
-              <div class="col s10">
-                <div class="content-left">
-                  <h6><img width="24px" height="20px" class="flag" src="../assets/south-africa.png">SA- League</h6>
-                </div>
-              </div>
-              <div class="col s2">
-                <div class="content-right">
-                  <b-icon icon="star" style="color: #00b232;"></b-icon>
-                </div>
-              </div>
-            </div>
-          </div>
           <template>
-
-            <div class="wrap-player bg-grey" v-for="(league,index) in saLeague" :key="index">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li class="matchTypeWidth">{{ league.match_type }}</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>{{ league.first_team }}</li>
-                      <li>{{ league.second_team }}</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>{{ league.first_team_score }}</li>
-                      <li>{{ league.second_team_score }}</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <match-card :league-record="saLeague" :leagueName="'SA - Premier League'"></match-card>
           </template>
         </div>
       </div>
@@ -104,8 +21,10 @@
 </template>
 
 <script>
+import MatchCard from "@/components/matchCard";
 export default {
   name: "scoreCard",
+  components: {MatchCard},
   data() {
     return {
       franceLeague: [
@@ -114,14 +33,14 @@ export default {
           "second_team": "Rennes",
           "first_team_score": 1,
           "second_team_score": 1,
-          "match_type": "end pens"
+          "match_type": "End pens"
         },
         {
-          "first_team": "Monaco",
-          "second_team": "Rennes",
+          "first_team": "AC MILAN",
+          "second_team": "Jeventus",
           "first_team_score": 1,
           "second_team_score": 0,
-          "match_type": "end"
+          "match_type": "End"
         }
       ],
       saLeague: [
@@ -130,14 +49,14 @@ export default {
           "second_team": "Ars",
           "first_team_score": 2,
           "second_team_score": 1,
-          "match_type": "end"
+          "match_type": "End"
         },
         {
           "first_team": "Real Madrid",
           "second_team": "Barcelona",
           "first_team_score": 1,
           "second_team_score": 0,
-          "match_type": "end"
+          "match_type": "End"
         }
       ],
     }
@@ -182,72 +101,5 @@ h4 {
   border-radius: 12px;
 }
 
-.stats .wrap-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
 
-.stats .row {
-  margin-bottom: 0;
-}
-
-.row .col.s8 {
-  width: 66.6666666667%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-
-.stats .wrap-header h6 {
-  color: #888;
-}
-
-.row .col.s4 {
-  width: 33.3333333333%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-
-.stats .content-right {
-  text-align: right;
-}
-
-.stats .wrap-player {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-a {
-  text-decoration: none;
-}
-
-.stats .content-left ul {
-  padding: 0;
-  margin: 0;
-}
-
-.stats .content-left ul li {
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #333;
-}
-
-ul:not(.browser-default) > li {
-  list-style-type: none;
-}
-
-.stats .content-right span {
-  color: #333;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.flag {
-  margin-right: 10px;
-}
-
-.matchTypeWidth {
-  width: 50px;
-}
 </style>
