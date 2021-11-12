@@ -69,23 +69,10 @@ export default {
   margin-bottom: 0;
 }
 
-.row .col.s8 {
-  width: 66.6666666667%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-
 .wrap-header h6 {
   color: #888;
 }
 
-.row .col.s4 {
-  width: 33.3333333333%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
 
 .content-right {
   text-align: right;

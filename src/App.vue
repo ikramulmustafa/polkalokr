@@ -58,12 +58,14 @@ export default {
 </script>
 
 <style>
-#app {
+#app { /*  main div CSS */
   margin: 0 auto;
   width: 500px;
   box-shadow: 0px 3px 4px rgb(0 0 0 / 25%);
   background: #efefef87;
+  font-family: 'Roboto', sans-serif;
 }
+/* Nav BAR CSS */
 .nav {
   height: 50px;
   width: 100%;
@@ -71,13 +73,6 @@ export default {
   position: relative;
 }
 
-.scores {
-  margin-top: 8px;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  margin-left: 0.75rem;
-}
 
 .nav > .nav-header {
   display: inline;
@@ -155,7 +150,15 @@ export default {
   height: calc(100vh - 400px);
   overflow-y: auto;
 }
+/* Nav BAR CSS */
 
+.scores {
+  margin-top: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 0.75rem;
+}
 .search-box {
   display: flex;
   flex-direction: row;

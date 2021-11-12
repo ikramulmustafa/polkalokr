@@ -60,31 +60,6 @@ export default {
   background: #ffffff;
 }
 
-.wrap-title {
-  margin-bottom: 20px;
-}
-
-h4 {
-  line-height: 110%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  color: #333;
-}
-
-.stats .wrap-title-two {
-  margin-bottom: 20px;
-}
-
-.stats .wrap-title-two h6 {
-  padding: 6px 15px;
-  background: #888;
-  color: #fff;
-  display: inline-block;
-  border-radius: 20px;
-  font-size: 13px;
-}
-
 .stats .wrap-content {
   padding: 15px;
   box-shadow: 0 3px 11px rgb(0 0 0 / 15%);
