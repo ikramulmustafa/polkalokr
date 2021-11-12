@@ -31,6 +31,74 @@
         <div class="sub-tab d-flex">
           <div class="flex-column justify-content-center pointer"
                :class="[activeSubTab === 'all' ? 'active' : '' ]"
+               @click="openSubTab('all')">
+            <p class="secondary">All</p>
+            <div :class="[activeSubTab === 'all' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+          <div class="flex-column justify-content-center pointer m-l-25"
+               :class="[activeSubTab === 'live' ? 'active' : '' ]"
+               @click="openSubTab('live')">
+            <p class="secondary">Live</p>
+            <div :class="[activeSubTab === 'live' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+
+          <div class="flex-column justify-content-center pointer m-l-25"
+               :class="[activeSubTab === 'favorites' ? 'active' : '' ]"
+               @click="openSubTab('favorites')">
+            <p class="secondary">Favorites</p>
+            <div :class="[activeSubTab === 'favorites' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+        </div>
+        <div v-if="activeSubTab === 'all'">
+          <score-card></score-card>
+        </div>
+        <div v-if="activeSubTab === 'live'">
+          <score-card></score-card>
+        </div>
+        <div v-if="activeSubTab === 'favorites'">
+          <score-card></score-card>
+        </div>
+      </div>
+
+      <div v-else-if="activeTab === 'today'">
+
+        <div class="sub-tab d-flex">
+          <div class="flex-column justify-content-center pointer"
+               :class="[activeSubTab === 'all' ? 'active' : '' ]"
+               @click="openSubTab('all')">
+            <p class="secondary">All</p>
+            <div :class="[activeSubTab === 'all' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+          <div class="flex-column justify-content-center pointer m-l-25"
+               :class="[activeSubTab === 'live' ? 'active' : '' ]"
+               @click="openSubTab('live')">
+            <p class="secondary">Live</p>
+            <div :class="[activeSubTab === 'live' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+
+          <div class="flex-column justify-content-center pointer m-l-25"
+               :class="[activeSubTab === 'favorites' ? 'active' : '' ]"
+               @click="openSubTab('favorites')">
+            <p class="secondary">Favorites</p>
+            <div :class="[activeSubTab === 'favorites' ? 'sub-tab-bar' : '' ]"></div>
+          </div>
+        </div>
+        <div v-if="activeSubTab === 'all'">
+          <score-card></score-card>
+        </div>
+        <div v-if="activeSubTab === 'live'">
+          <score-card></score-card>
+        </div>
+        <div v-if="activeSubTab === 'favorites'">
+          <score-card></score-card>
+        </div>
+      </div>
+
+      <div v-else-if="activeTab === 'tomorrow'">
+
+        <div class="sub-tab d-flex">
+          <div class="flex-column justify-content-center pointer"
+               :class="[activeSubTab === 'all' ? 'active' : '' ]"
                @click="openTab('all')">
             <p class="secondary">All</p>
             <div :class="[activeSubTab === 'all' ? 'sub-tab-bar' : '' ]"></div>
@@ -59,13 +127,7 @@
           <score-card></score-card>
         </div>
       </div>
-      <div v-else-if="activeTab === 'today'">
-        <score-card></score-card>
-      </div>
 
-      <div v-else-if="activeTab === 'tomorrow'">
-        <score-card></score-card>
-      </div>
     </div>
   </div>
 </template>
@@ -83,9 +145,14 @@ export default {
   },
   methods: {
     openTab(value) {
-
       this.$emit('tabChanged', value);
       this.activeTab = value;
+      this.activeSubTab = 'all';
+
+    },
+    openSubTab(value) {
+      this.$emit('tabChanged', value);
+      this.activeSubTab = value;
     },
   }
 }
