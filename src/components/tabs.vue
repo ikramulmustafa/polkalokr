@@ -99,20 +99,20 @@
         <div class="sub-tab d-flex">
           <div class="flex-column justify-content-center pointer"
                :class="[activeSubTab === 'all' ? 'active' : '' ]"
-               @click="openTab('all')">
+               @click="openSubTab('all')">
             <p class="secondary">All</p>
             <div :class="[activeSubTab === 'all' ? 'sub-tab-bar' : '' ]"></div>
           </div>
           <div class="flex-column justify-content-center pointer m-l-25"
                :class="[activeSubTab === 'live' ? 'active' : '' ]"
-               @click="openTab('live')">
+               @click="openSubTab('live')">
             <p class="secondary">Live</p>
             <div :class="[activeSubTab === 'live' ? 'sub-tab-bar' : '' ]"></div>
           </div>
 
           <div class="flex-column justify-content-center pointer m-l-25"
                :class="[activeSubTab === 'favorites' ? 'active' : '' ]"
-               @click="openTab('favorites')">
+               @click="openSubTab('favorites')">
             <p class="secondary">Favorites</p>
             <div :class="[activeSubTab === 'favorites' ? 'sub-tab-bar' : '' ]"></div>
           </div>
@@ -147,8 +147,7 @@ export default {
     openTab(value) {
       this.$emit('tabChanged', value);
       this.activeTab = value;
-      this.activeSubTab = 'all';
-
+      this.activeSubTab = "all";
     },
     openSubTab(value) {
       this.$emit('tabChanged', value);

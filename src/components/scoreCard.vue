@@ -17,23 +17,21 @@
               </div>
             </div>
           </div>
-          <a href="">
-
-            <div class="wrap-player bg-grey">
+          <template>
+            <div class="wrap-player bg-grey" v-for="(league,index) in franceLeague" :key="index">
               <div class="row">
                 <div class="col s3">
                   <div class="content-left">
                     <ul>
-                      <li>End</li>
-                      <li>Pens</li>
+                      <li class="matchTypeWidth">{{ league.match_type }}</li>
                     </ul>
                   </div>
                 </div>
                 <div class="col s6">
                   <div class="content-left">
                     <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
+                      <li>{{ league.first_team }}</li>
+                      <li>{{ league.second_team }}</li>
                     </ul>
                   </div>
                 </div>
@@ -41,76 +39,14 @@
                 <div class="col s2">
                   <div class="content-right">
                     <ul>
-                      <li>1</li>
-                      <li>1</li>
+                      <li>{{ league.first_team_score }}</li>
+                      <li>{{ league.second_team_score }}</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="">
-            <div class="wrap-player bg-grey">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li>End</li>
-                      <li>Pens</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>1</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="">
-            <div class="wrap-player bg-grey">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li>End</li>
-                      <li>Pens</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>1</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+          </template>
 
         </div>
       </div>
@@ -120,7 +56,7 @@
             <div class="row">
               <div class="col s10">
                 <div class="content-left">
-                  <h6><img width="24px" height="20px" class="flag" src="../assets/south-africa.png">France- Coupe De La</h6>
+                  <h6><img width="24px" height="20px" class="flag" src="../assets/south-africa.png">SA- League</h6>
                 </div>
               </div>
               <div class="col s2">
@@ -130,22 +66,22 @@
               </div>
             </div>
           </div>
-          <a href="">
-            <div class="wrap-player bg-grey">
+          <template>
+
+            <div class="wrap-player bg-grey" v-for="(league,index) in saLeague" :key="index">
               <div class="row">
                 <div class="col s3">
                   <div class="content-left">
                     <ul>
-                      <li>End</li>
-                      <li>Pens</li>
+                      <li class="matchTypeWidth">{{ league.match_type }}</li>
                     </ul>
                   </div>
                 </div>
                 <div class="col s6">
                   <div class="content-left">
                     <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
+                      <li>{{ league.first_team }}</li>
+                      <li>{{ league.second_team }}</li>
                     </ul>
                   </div>
                 </div>
@@ -153,77 +89,14 @@
                 <div class="col s2">
                   <div class="content-right">
                     <ul>
-                      <li>1</li>
-                      <li>1</li>
+                      <li>{{ league.first_team_score }}</li>
+                      <li>{{ league.second_team_score }}</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="">
-            <div class="wrap-player bg-grey">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li>End</li>
-                      <li>Pens</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>1</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="">
-            <div class="wrap-player bg-grey">
-              <div class="row">
-                <div class="col s3">
-                  <div class="content-left">
-                    <ul>
-                      <li>End</li>
-                      <li>Pens</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col s6">
-                  <div class="content-left">
-                    <ul>
-                      <li>Monaca</li>
-                      <li>Rennes</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col s2">
-                  <div class="content-right">
-                    <ul>
-                      <li>1</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
+          </template>
         </div>
       </div>
     </div>
@@ -235,11 +108,38 @@ export default {
   name: "scoreCard",
   data() {
     return {
-      franceLeague : [{
-        'title' : 'France',
-
-      }
-      ]
+      franceLeague: [
+        {
+          "first_team": "Monaco",
+          "second_team": "Rennes",
+          "first_team_score": 1,
+          "second_team_score": 1,
+          "match_type": "end pens"
+        },
+        {
+          "first_team": "Monaco",
+          "second_team": "Rennes",
+          "first_team_score": 1,
+          "second_team_score": 0,
+          "match_type": "end"
+        }
+      ],
+      saLeague: [
+        {
+          "first_team": "Man United",
+          "second_team": "Ars",
+          "first_team_score": 2,
+          "second_team_score": 1,
+          "match_type": "end"
+        },
+        {
+          "first_team": "Real Madrid",
+          "second_team": "Barcelona",
+          "first_team_score": 1,
+          "second_team_score": 0,
+          "match_type": "end"
+        }
+      ],
     }
   }
 }
@@ -250,9 +150,11 @@ export default {
   margin-bottom: 30px;
   background: #ffffff;
 }
+
 .wrap-title {
   margin-bottom: 20px;
 }
+
 h4 {
   line-height: 110%;
   margin: 0;
@@ -260,9 +162,11 @@ h4 {
   font-weight: 500;
   color: #333;
 }
+
 .stats .wrap-title-two {
   margin-bottom: 20px;
 }
+
 .stats .wrap-title-two h6 {
   padding: 6px 15px;
   background: #888;
@@ -271,33 +175,40 @@ h4 {
   border-radius: 20px;
   font-size: 13px;
 }
+
 .stats .wrap-content {
   padding: 15px;
   box-shadow: 0 3px 11px rgb(0 0 0 / 15%);
-  border-radius:12px;
+  border-radius: 12px;
 }
+
 .stats .wrap-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
+
 .stats .row {
   margin-bottom: 0;
 }
+
 .row .col.s8 {
   width: 66.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
+
 .stats .wrap-header h6 {
   color: #888;
 }
+
 .row .col.s4 {
   width: 33.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
+
 .stats .content-right {
   text-align: right;
 }
@@ -306,27 +217,37 @@ h4 {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+
 a {
   text-decoration: none;
 }
+
 .stats .content-left ul {
   padding: 0;
   margin: 0;
 }
+
 .stats .content-left ul li {
   margin-bottom: 5px;
   font-size: 14px;
   color: #333;
 }
+
 ul:not(.browser-default) > li {
   list-style-type: none;
 }
+
 .stats .content-right span {
   color: #333;
   font-size: 14px;
   font-weight: 500;
 }
+
 .flag {
   margin-right: 10px;
+}
+
+.matchTypeWidth {
+  width: 50px;
 }
 </style>
