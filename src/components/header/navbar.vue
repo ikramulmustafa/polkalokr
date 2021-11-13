@@ -9,8 +9,8 @@
       </label>
     </div>
     <div class="nav-links" >
-      <a href="#">Home</a>
-      <a href="#">Scores</a>
+      <router-link to="/home" @click.native="closeMenu">Home</router-link>
+      <router-link to="/" @click.native="closeMenu">Scores</router-link>
     </div>
     <div class="scores">
       <p>Scores</p>
@@ -22,9 +22,16 @@
 
 <script>
 import SearchBar from "@/components/header/searchBar";
+
 export default {
   name: "navbar",
-  components: {SearchBar}
+  components: {SearchBar},
+  methods: {
+    closeMenu(){ //it closes the menu bar when we change router
+       let menu = document.getElementById('nav-check');
+       menu.checked = false;
+     }
+  },
 }
 </script>
 

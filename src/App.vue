@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">
       <navbar></navbar>
-      <tabs></tabs>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -10,13 +10,11 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 
-import Tabs from "@/components/tabs";
 import Navbar from "@/components/header/navbar";
 export default {
   name: 'App',
   components: {
     Navbar,
-    Tabs
   },
 
 }
