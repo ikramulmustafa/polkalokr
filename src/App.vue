@@ -8,8 +8,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
 import Navbar from "@/components/header/navbar";
 export default {
   name: 'App',
