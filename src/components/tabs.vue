@@ -188,37 +188,40 @@ export default {
       dateContext: {},
       franceLeague: [
         {
-          first_team: "Monaco",
-          second_team: "Rennes",
-          first_team_score: 1,
-          second_team_score: 1,
-          match_type: "End pens"
+          first_team: "",
+          second_team: "",
+          first_team_score: 0,
+          second_team_score: 0,
+          match_type: ""
         },
         {
-          first_team: "AC MILAN",
-          second_team: "Jeventus",
-          first_team_score: 1,
+          first_team: "",
+          second_team: "",
+          first_team_score: 0,
           second_team_score: 0,
-          match_type:"End"
+          match_type:""
         }
       ],
       saLeague: [
         {
-          first_team: "Man United",
-          second_team: "Ars",
-          first_team_score: 2,
-          second_team_score: 1,
-          match_type: "End"
+          first_team: "",
+          second_team: "",
+          first_team_score: 0,
+          second_team_score: 0,
+          match_type: ""
         },
         {
-          first_team: "Real Madrid",
-          second_team: "Barcelona",
-          first_team_score: 1,
+          first_team: "",
+          second_team: "",
+          first_team_score: 0,
           second_team_score: 0,
-          match_type: "End"
+          match_type: ""
         }
       ],
     }
+  },
+  created() {
+    this.openTab(this.activeTab);
   },
   methods: {
     openTab(value) {
