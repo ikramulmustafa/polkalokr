@@ -9,7 +9,7 @@
         </div>
         <div class="col-sm-2">
           <div class="content-right">
-            <b-icon icon="star" style="color: #00b232;"></b-icon>
+            <b-icon :icon="iconName" @click="favouriteLeague" style="color: #00b232;"></b-icon>
           </div>
         </div>
       </div>
@@ -55,6 +55,20 @@ export default {
     leagueName: {
       type: String
     }
+  },
+  data() {
+    return {
+      iconName: 'star'
+    }
+  },
+  methods:{
+     favouriteLeague(){
+       if(this.iconName === 'star'){
+         this.iconName = 'star-fill';
+       } else if(this.iconName === 'star-fill'){
+         this.iconName = 'star';
+       }
+     }
   }
 }
 </script>
